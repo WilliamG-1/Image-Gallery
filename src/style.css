@@ -1,7 +1,116 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
 body {
     background-color: rgb(93, 104, 102);
+    margin: 0;
+    padding: 0;
 }
 
-body div{
-    background-color: red;
+#content {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: 1fr 7fr / 150px 4fr;
+    min-height: 100vh;
+}
+#header {
+    padding: 10px 40px;
+    background-color: rgb(71, 71, 179);
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    align-content: center;
+
+}
+#sidebar {
+    background-color: rgb(36, 143, 143);
+    padding: 0 20px;
+    display: none;
+    transition: 0.4s;
+}
+.line {
+    height: 1px;
+    width: 1fr;
+    background-color: black;
+}
+
+#header button {
+    width: 35px;
+    height: 38px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    grid-column: 1;
+}
+#header h1{
+    grid-column: span 1;
+    text-align: center;
+}
+.hamburgerLines{
+    border-radius: 2px;
+    height: 0.5px;
+    width: 25px;
+    background-color: white;
+    flex: 1;
+}
+
+#mainDisplay{
+    background-color: rgb(23, 116, 85);
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sidebar.visible{
+    display: block;
+    grid-column: span 1;
+}
+#mainDisplay.menuIsHere{
+    grid-column: span 1;
+}
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: rgb(14, 61, 14);
+    width: min(100%, 900px);
+    height: min(75vw, 600px);
+}
+#sliderContainer .image {
+    flex: 1;
+}
+#sliderContainer .sliderNavigation {
+    background-color: rgb(112, 158, 112);
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageCounterContainer {
+    flex: 1;
+    background-color: rgb(58, 156, 221);
+    display: flex;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+.sliderButtonsContainer {
+    flex: 3;
+    background-color: rgb(37, 179, 155);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.siderbarToggled {
+    height: min(calc(75vw - 150px), 600px);
 }
