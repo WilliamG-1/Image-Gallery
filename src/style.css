@@ -1,3 +1,7 @@
 body {
     background-color: rgb(93, 104, 102);
 }
+
+body div{
+    background-color: red;
+}
